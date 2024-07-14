@@ -5,16 +5,16 @@ for i in numbers:
     if i == 1:
         continue
     is_prime = True
-    count = 0
     for j in range(2, i):
-            if i%j == 0:
-                break
-            is_prime = False
-            count += 1
-    if is_prime == False:
+        if i % j == 0:
+          is_prime = False
+          break
+    if is_prime:
         primes.append(i)
     else:
         not_primes.append(i)
+
+
 print('primes', primes)
 print('not_primes', not_primes)
 
